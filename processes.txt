@@ -1,0 +1,22 @@
+Amazon Games
+Amazon Games Services
+Amazon Games UI
+chrome
+EDUSBAgent
+E_S60RPB
+GameBarPresenceWriter
+GoogleCrashHandler
+GoogleCrashHandler64
+gamingservices
+gamingservicesnet
+HuionServer
+HuionTablet
+HuionTabletCore
+krita
+Microsoft.Photos
+msedge
+OfficeClickToRun
+opera
+Taskmgr
+UserOOBEBroker
+YourPhone
