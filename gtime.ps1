@@ -36,9 +36,15 @@ function KillProcess(){
   foreach($process in $global:Obsticales){ Stop-Process -Name $process -Force; }
 }
 
+function KillShell(){
+  Stop-Process -Name 'pwsh';
+  Stop-Process -Name 'powershell';
+}
+
 #MAIN
 function Main(){
   Startup;
   KillProcess;
+  KillShell;
 }
 Main;
