@@ -17,6 +17,7 @@ Microsoft.Photos
 msedge
 OfficeClickToRun
 opera
+opera_crashreporter
 Taskmgr
 UserOOBEBroker
 YourPhone

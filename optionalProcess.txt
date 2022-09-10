@@ -1,0 +1,3 @@
+Riot Games,RiotClientCrashHandler,RiotClientServices,LeagueClient,LeagueClientUx,LeagueClientUxRender,LeagueCrashHandler,Overwolf,OverwolfBrowser,OverwolfHelper
+Epic Games,EpicGamesLauncher,EpicWebHelper
+steam,steamservice,steamwebhelper

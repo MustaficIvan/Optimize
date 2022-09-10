@@ -9,12 +9,18 @@ function Startup(){
   $choices.Add((New-Object Management.Automation.Host.ChoiceDescription -ArgumentList '&Yes'));
   $choices.Add((New-Object Management.Automation.Host.ChoiceDescription -ArgumentList '&All'));
 
+  <#
   $OptionalProcess = @( @('Riot Games', 'RiotClientCrashHandler', 'RiotClientServices', 'LeagueClient','LeagueClientUx','LeagueClientUxRender','LeagueCrashHandler', 'Overwolf', 'OverwolfBrowser', 'OverwolfHelper'),
-                        @('Epic Games', 'EpicGamesLauncher', 'EpicWebHelper')
+                        @('Epic Games', 'EpicGamesLauncher', 'EpicWebHelper'),
+                        @('steam', 'steamservice','steamwebhelper')
                       );
-  $Conclusion;
+  #>
+
+  $OptionalProcess = [System.Collections.ArrayList]@();
+  $OptionalFile = Get-Content .\optionalProcess.txt; 
   
-  $i = 0;
+  foreach($item in $OptionalFile){ $OptionalProcess.Add($item -split ','); }
+
   :process foreach($process in $OptionalProcess){
     $decision = $Host.UI.PromptForChoice($process[0].ToUpper(), 'Close '+ $process[0] +'?', $choices, 0);
     switch($decision){
