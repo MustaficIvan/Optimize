@@ -12,7 +12,7 @@ function Startup(){
   $OptionalProcess = [System.Collections.ArrayList]@();
   $OptionalFile = Get-Content .\optionalProcess.txt; 
   
-  foreach($item in $OptionalFile){ $OptionalProcess.Add($item -split ','); }
+  foreach($item in $OptionalFile){ $OptionalProcess.Add($item -split ', '); }
 
   :process foreach($process in $OptionalProcess){
     $decision = $Host.UI.PromptForChoice($process[0].ToUpper(), 'Close '+ $process[0] +'?', $choices, 0);
