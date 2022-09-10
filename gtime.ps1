@@ -9,13 +9,6 @@ function Startup(){
   $choices.Add((New-Object Management.Automation.Host.ChoiceDescription -ArgumentList '&Yes'));
   $choices.Add((New-Object Management.Automation.Host.ChoiceDescription -ArgumentList '&All'));
 
-  <#
-  $OptionalProcess = @( @('Riot Games', 'RiotClientCrashHandler', 'RiotClientServices', 'LeagueClient','LeagueClientUx','LeagueClientUxRender','LeagueCrashHandler', 'Overwolf', 'OverwolfBrowser', 'OverwolfHelper'),
-                        @('Epic Games', 'EpicGamesLauncher', 'EpicWebHelper'),
-                        @('steam', 'steamservice','steamwebhelper')
-                      );
-  #>
-
   $OptionalProcess = [System.Collections.ArrayList]@();
   $OptionalFile = Get-Content .\optionalProcess.txt; 
   
